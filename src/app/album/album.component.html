@@ -1,0 +1,15 @@
+<div class="text-center mb-3">
+    <h2>Album</h2>
+  </div>
+  
+  <div class="card mb-3" *ngIf="album">
+      <div class="card-header">
+        {{album.title}}
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <footer class="blockquote-footer">userid - {{album.userId}}, <cite title="Source Title">id - {{album.id}}</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+    <router-outlet></router-outlet>

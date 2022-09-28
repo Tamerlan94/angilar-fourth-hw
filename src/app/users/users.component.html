@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">username</th>
+        <th scope="col">phone</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of users">       
+            <th scope="row">{{post.id}}</th>
+            <td>{{post.name}}</td>
+            <td>{{post.username}}</td>
+            <td>{{post.phone}}</td>
+            <td><a class="btn btn-success" [routerLink]="['/users', post.id]">go to post</a></td>
+            <td><a class="btn btn-success" [routerLink]="['/users', post.id, 'albums']">go with albums</a></td>
+            <td><a class="btn btn-success" [routerLink]="['/users', post.id, 'todos']">go with todos</a></td>
+            <td><a class="btn btn-success" [routerLink]="['/users', post.id, 'posts']">go with posts</a></td>
+        </tr>    
+    </tbody>
+  </table>

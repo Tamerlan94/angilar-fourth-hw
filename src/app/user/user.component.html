@@ -1,0 +1,21 @@
+<div class="text-center mb-3">
+    <h2>User</h2>
+  </div>
+  
+  <div class="card mb-3" *ngIf="user">
+      <div class="card-header">
+        {{user.name}}
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{user.address.street}}</p>
+          <p>{{user.address.suite}}</p>
+          <p>{{user.address.city}}</p>
+          <p>{{user.address.zipcode}}</p>
+          <p>{{user.address.geo.lat}}</p>
+          <p>{{user.address.geo.lng}}</p>
+          <footer class="blockquote-footer">{{user.phone}}, <cite title="Source Title">site - {{user.website}}</cite></footer>
+        </blockquote>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
